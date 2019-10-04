@@ -1,4 +1,3 @@
-
 @foreach($posts as $post)
 <!-- Single Blog Post -->
 <div class="single-blog-post d-flex flex-wrap mt-50">

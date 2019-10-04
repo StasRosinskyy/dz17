@@ -242,13 +242,14 @@
             <!-- Blog Posts Area -->
             <div class="col-12 col-lg-8">
                 <div class="blog-posts-area">
+                    
                     @include('posts')
                 </div>
-               
+                
                 <!-- Pager -->
                 <ol class="foode-pager mt-50">
-                    <li><a href="#"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Newer</a></li>
-                    <li><a href="#">Older <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+                    <li><a href="{{$posts->previousPageUrl()}}"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Newer</a></li>
+                    <li><a href="{{$posts->nextPageUrl()}}">Older <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
                 </ol>
             </div>
 
