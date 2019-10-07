@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <img src="img/core-img/breadcrumb-line.png" alt="">
+                    <img src="../../public/img/core-img/breadcrumb-line.png" alt="">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
@@ -27,7 +27,7 @@
                         
                         <!-- Featured Post Area -->
                         <div class="featured-posts">
-                            <a href="#"><img src="img/blog-img/1.jpg" alt=""></a>
+                            <a href="#"><img src="../../public/img/blog-img/1.jpg" alt=""></a>
                             <!-- Featured Post Content -->
                             <div class="featured-post-content">
                                 <p>MAY 8, 2018 / foody</p>
@@ -36,9 +36,32 @@
                                 </a>
                             </div>
                         </div>
-    
-                        @include('posts')
-                    
+                    @foreach($posts as $post)
+                    <!-- Single Blog Post -->
+                        <div class="single-blog-post d-flex flex-wrap mt-50">
+                            <!-- Thumbnail -->
+                            <div class="post-thumbnail mb-50">
+                                <a href="{{route('post', $post)}}"><img src="../../public/img/blog-img/{{$post->preview_image}}" alt=""></a>
+                            </div>
+                            <!-- Content -->
+                            <div class="post-content mb-50">
+                                <p class="post-date">{{$post->created_at->format("F d - Y")}} / {{$post->category->name}} </p>
+                                <a href="#" class="post-title">
+                                    <h4><a href="{{route('post', $post)}}">{{$post->title}}</a></h4>
+                                </a>
+                                <div class="post-meta">
+                                    <a href="{{route('posts.by.author', $post->user)}}"><span>by</span> {{$post->user->name}} </a>
+                                    <a href="#"><i class="fa fa-eye"></i> {{$post->views}}</a>
+                                    <a href="#"><i class="fa fa-comments"></i> 08</a>
+                                </div>
+                                <p class="post-excerpt">{{$post->preview_text}}.</p>
+                                <a href="{{route('post', $post)}}" class="read-more-btn">Continue Reading <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                            <!-- Post Curve Line -->
+                            <img class="post-curve-line" src="../../public/img/core-img/post-curve-line.png" alt="">
+                        </div>
+                    @endforeach
+
                     </div>
                     
                     <!-- Pager -->
@@ -68,11 +91,12 @@
                             </div>
                             <!-- Thumbnail -->
                             <div class="about-thumbnail">
-                                <img src="img/blog-img/about-me.jpg" alt="">
+                                <img src="../../public/img/blog-img/about-me.jpg" alt="">
+                                <img src="../../public/img/blog-img/about-me.jpg" alt="">
                             </div>
                             <!-- Content -->
                             <div class="widget-content text-center">
-                                <img src="img/core-img/signature.png" alt="">
+                                <img src="../../public/img/core-img/signature.png" alt="">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
                             </div>
                         </div>
@@ -101,7 +125,7 @@
                             <!-- Single Latest Posts -->
                             <div class="single-latest-post d-flex">
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/lp1.jpg" alt="">
+                                    <img src="../../public/img/blog-img/lp1.jpg" alt="">
                                 </div>
                                 <div class="post-content">
                                     <a href="#" class="post-title">
@@ -114,7 +138,7 @@
                             <!-- Single Latest Posts -->
                             <div class="single-latest-post d-flex">
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/lp2.jpg" alt="">
+                                    <img src="../../public/img/blog-img/lp2.jpg" alt="">
                                 </div>
                                 <div class="post-content">
                                     <a href="#" class="post-title">
@@ -127,7 +151,7 @@
                             <!-- Single Latest Posts -->
                             <div class="single-latest-post d-flex">
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/lp3.jpg" alt="">
+                                    <img src="../../public/img/blog-img/lp3.jpg" alt="">
                                 </div>
                                 <div class="post-content">
                                     <a href="#" class="post-title">
@@ -140,7 +164,7 @@
                             <!-- Single Latest Posts -->
                             <div class="single-latest-post d-flex">
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/lp4.jpg" alt="">
+                                    <img src="../../public/img/blog-img/lp4.jpg" alt="">
                                 </div>
                                 <div class="post-content">
                                     <a href="#" class="post-title">
@@ -153,7 +177,7 @@
                             <!-- Single Latest Posts -->
                             <div class="single-latest-post d-flex">
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/lp5.jpg" alt="">
+                                    <img src="../../public/img/blog-img/lp5.jpg" alt="">
                                 </div>
                                 <div class="post-content">
                                     <a href="#" class="post-title">
@@ -168,7 +192,7 @@
                         <!-- ##### Single Widget Area ##### -->
                         <div class="single-widget-area">
                             <!-- Adds -->
-                            <a href="#"><img src="img/blog-img/add.png" alt=""></a>
+                            <a href="#"><img src="../../public/img/blog-img/add.png" alt=""></a>
                         </div>
                         
                         <!-- ##### Single Widget Area ##### -->
@@ -194,15 +218,9 @@
                             </div>
                             <!-- Tags -->
                             <ol class="popular-tags d-flex flex-wrap">
-                                <li><a href="#">Creative</a></li>
-                                <li><a href="#">Unique</a></li>
-                                <li><a href="#">Template</a></li>
-                                <li><a href="#">Photography</a></li>
-                                <li><a href="#">travel</a></li>
-                                <li><a href="#">lifestyle</a></li>
-                                <li><a href="#">Wordpress Template</a></li>
-                                <li><a href="#">food</a></li>
-                                <li><a href="#">Idea</a></li>
+                                @foreach($tags as $tag)
+                                <li><a href="{{route('tags', $tag->slug)}}">{{$tag->name}}</a></li>
+                                    @endforeach
                             </ol>
                         </div>
                     

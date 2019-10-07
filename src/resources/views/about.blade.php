@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <img src="img/core-img/breadcrumb-line.png" alt="">
+                    <img src="../../public/img/core-img/breadcrumb-line.png" alt="">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
@@ -32,7 +32,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
                     <div class="about-content">
-                        <img src="img/blog-img/18.jpg" alt="">
+                        <img src="../../public/img/blog-img/18.jpg" alt="">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi chitecto beatae vitae dicta sunt explicabo.</p>
                         <blockquote>
@@ -41,10 +41,10 @@
                         <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
                         <div class="row">
                             <div class="col-12 col-md-6">
-                                <img src="img/blog-img/19.jpg" alt="">
+                                <img src="../../public/img/blog-img/19.jpg" alt="">
                             </div>
                             <div class="col-12 col-md-6">
-                                <img src="img/blog-img/20.jpg" alt="">
+                                <img src="../../public/img/blog-img/20.jpg" alt="">
                             </div>
                         </div>
                         <p>Quisque nunc erat, pharetra ut cursus quis, tristique eu enim. Maecenas elementum dolor vel erat vestibulum malesuada. Pellentesque sed magna porta, finibus elit et, mollis lacus. Proin elementum metus nec tincidunt iaculis. Donec ut vulputate sem, venenatis ultricies felis. Praesent convallis mauris leo, a dignissim lorem bibendum eget. Duis sodales urna sed odio maximus egestas. Nulla molestie consequat mattis.</p>
@@ -59,7 +59,7 @@
                         </ul>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         <div class="signature">
-                            <img class="mb-0" src="img/core-img/signa.png" alt="">
+                            <img class="mb-0" src="../../public/img/core-img/signa.png" alt="">
                         </div>
                     </div>
                 </div>
