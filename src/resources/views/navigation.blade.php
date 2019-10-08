@@ -1,7 +1,7 @@
 <div class="classynav">
     <ul>
         <li><a href="{{ route('home') }}">Home</a></li>
-        <li><a href="{{ route('blog') }}">Catagories</a>
+        <li><a href="{{ route('blog') }}">Categories</a>
             <ul class="dropdown">
                 @foreach($categories as $category)
                 <li><a href="{{route('category', $category->slug)}}">- {{$category->name}}</a></li>

@@ -7,7 +7,7 @@
     </div>
     <!-- Content -->
     <div class="post-content mb-50">
-        <p class="post-date">{{$post->created_at->format("F d - Y")}} / {{$post->category->name}} </p>
+        <p class="post-date"><a href="{{route('posts_date', $post->created_at)}}"> {{$post->created_at->format("F d - Y")}} </a> / {{$post->category->name}} </p>
         <a href="#" class="post-title">
             <h4><a href="{{route('post', $post)}}">{{$post->title}}</a></h4>
         </a>

@@ -14,6 +14,7 @@ $factory->define(App\Post::class, function (Faker $faker) {
         'preview_image' => rand(1,5).'.jpg',
         'preview_cover' => rand(1,5).'.jpg',
         'views' => 0,
+        'comments' => 0,
         'body' => $faker->realText(),
         'created_at' => date('Y-m-d')
     ];

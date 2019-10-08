@@ -19,6 +19,14 @@ class DatabaseSeeder extends Seeder
             ['name' => 'Jhon Doe', 'email' => 'doe@gmail.com', 'password' => 'DeItsMyPassword',
                 'remember_token' => \Illuminate\Support\Str::random(10)],
         ];
+        $comments = [
+            ['user_id' => rand(1, 2), 'post_id' => 1, 'comment' => 'Wow, its...!'],
+            ['user_id' => rand(1, 2), 'post_id' => 1, 'comment' => 'Wow, its...!'],
+            ['user_id' => rand(1, 2), 'post_id' => 1, 'comment' => 'Wow, its...!'],
+            ['user_id' => rand(1, 2), 'post_id' => 1, 'comment' => 'Wow, its...!'],
+            ['user_id' => rand(1, 2), 'post_id' => 1, 'comment' => 'Wow, its...!'],
+            ['user_id' => rand(1, 2), 'post_id' => 1, 'comment' => 'Wow, its...!']
+        ];
         $categories = [
             ['name' => 'Features', 'slug' => 'features'],
             ['name' => 'Food', 'slug' => 'food'],
@@ -58,6 +66,8 @@ class DatabaseSeeder extends Seeder
             }
             DB::table('post_tag')->insert($post_tag);
         }
+        DB::table('comments')->insert($comments);
 
     }
+
 }

@@ -22,6 +22,7 @@ class CreatePostsTable extends Migration
             $table->string('preview_image');
             $table->string('preview_cover');
             $table->unsignedBigInteger('views');
+            $table->unsignedBigInteger('comments');
             $table->text('body');
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')
                 ->onDelete('cascade');

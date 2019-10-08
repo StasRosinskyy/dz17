@@ -49,4 +49,20 @@ Route::get('/author/{author}', function (\App\User $author) {
     return view('blog', ['posts' => $post]);
 })->name('posts.by.author');
 
+Route::get('/posts/{date}', function ($date) {
+    $post = \App\Post::where('created_at', '=', $date)->paginate(10);
+    return view('blog', ['posts' => $post]);
+})->name('posts_date'); // для проверки кликните по дате поста в списке блога
 
+Route::get('posts_date_category/{date}+{category}', function ($date, $category) {
+    $post = \App\Post::where('created_at', '=', $date)->where('category_id', '=', $category)->paginate(10);
+    return view('blog', ['posts' => $post]);
+})->name('posts_date_category');  // для проверки введите ссылку типа
+// http://localhost:8080/public/posts_date_category/2019-10-08%2000:00:00+1
+
+Route::get('/posts_author_category/{category}+{author}', function ($category, $author) {
+    $post = \App\Post::where('user_id', '=', $author)->where('category_id', '=', $category)->paginate(10);
+    return view('blog', ['posts' => $post]);
+})->name('posts_author_category');// для проверки введите ссылку типа
+// http://localhost:8080/public/posts_author_category/1+2
+// использую 1+2 потому что если указывать через / то отваливаются фотки и js, т.к. у меня указан "жесткий" путь к файлам
