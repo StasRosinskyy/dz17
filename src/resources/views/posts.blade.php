@@ -14,7 +14,7 @@
         <div class="post-meta">
             <a href="{{route('posts.by.author', $post->user)}}"><span>by</span> {{$post->user->name}} </a>
             <a href="#"><i class="fa fa-eye"></i> {{$post->views}}</a>
-            <a href="#"><i class="fa fa-comments"></i> 08</a>
+            <a href="#"><i class="fa fa-comments"></i> {{$post->comments}}</a>
         </div>
         <p class="post-excerpt">{{$post->preview_text}}.</p>
         <a href="{{route('post', $post)}}" class="read-more-btn">Continue Reading <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>

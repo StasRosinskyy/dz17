@@ -38,7 +38,7 @@
                                 <div class="post-meta">
                                     <a href="{{route('posts.by.author', $post->user)}}"><span>by</span> {{$post->user->name}}</a>
                                     <a href="#"><i class="fa fa-eye"></i> {{$post->views}}</a>
-                                    <a href="#"><i class="fa fa-comments"></i> 08</a>
+                                    <a href="#"><i class="fa fa-comments"></i> {{$post->comments}}</a>
                                 </div>
                                 <p>{{$post->body}}</p>
                                  </div>
